@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TH/.vs/TH/v16
+/TH/TH.AuthService/obj
+/TH/TH.AuthService/bin/Debug/netcoreapp3.1
