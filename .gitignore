@@ -5,3 +5,7 @@
 /TH/.vs/TH/v16
 /TH/TH.AuthService/obj
 /TH/TH.AuthService/bin/Debug/netcoreapp3.1
+/.vs
+/TH/.vs
+/TH/TH.AuthService.Models/bin/Debug/netcoreapp3.1
+/TH/TH.AuthService.Models/obj
