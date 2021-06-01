@@ -43,8 +43,15 @@ namespace TH.AuthService
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "My Awesome API",
-                    Version = "v1"
+                    Title = "Tutoring Helper API",
+                    Version = "v1",
+                    Contact = new OpenApiContact()
+                    {
+                        Name = "Hanna Holasava",
+                        Email = "golosowa.anna@gmail.com",
+                        Url = new System.Uri("https://www.linkedin.com/in/hanna-holasava/")
+                    },
+                    Description = "This project contains a system to help teachers provide public API to the students and monitor their activity"
                 });
             });
         }
@@ -72,7 +79,7 @@ namespace TH.AuthService
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Awesome API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TH API V1");
             });
         }
     }
