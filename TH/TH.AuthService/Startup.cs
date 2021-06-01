@@ -54,7 +54,7 @@ namespace TH.AuthService
                 {
                     Title = "My Awesome API",
                     Version = "v1"
-    });
+                });
             });
         }
 
