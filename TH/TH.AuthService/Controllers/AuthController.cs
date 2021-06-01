@@ -13,7 +13,7 @@ namespace TH.AuthService.Controllers
 {
     [ApiController]
     [Authorize]
-    [Route("/api/v1/[controller]")]
+    [Route("/api/v1/auth")]
     public class AuthController : ControllerBase
     {
         private List<Student> students = new List<Student>
@@ -22,14 +22,16 @@ namespace TH.AuthService.Controllers
             new Student { Login="alice@gmail.com", Password="55555", Name = "Alice" }
         };
 
-        [HttpGet("/login")]
+        [Route("login")]
+        [HttpGet]
         public IActionResult GetLogin()
         {
             return Ok($"Ваш логин: {User.Identity.Name}");
         }
 
         [AllowAnonymous]
-        [HttpPost("/token")]
+        [Route("token")]
+        [HttpPost]
         public IActionResult Token([FromBody]LoginRequestModel requestModel)
         {
             if (requestModel == null)
